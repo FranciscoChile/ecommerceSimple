@@ -1,0 +1,15 @@
+<!-- HERE! Spinner!! -->
+<section *ngIf="isLoading && !errorMessage">
+Loading... Retrieving data...
+</section>
+
+<ul>
+  <li *ngFor="let product of products">
+
+      {{product.name}} - {{product.stock}}
+
+  </li>
+</ul>
+<section *ngIf="errorMessage">
+  {{errorMessage}}
+</section>
